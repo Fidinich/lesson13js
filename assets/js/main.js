@@ -7,15 +7,18 @@ console.log('Sample JavaScript #1 HW #13');
  */
 
 // имя переменной: myNum, значение: 10
-
+var myNum = 10;
 // имя переменной: myStr, значение: 'строка'
-
+var myStr = `строка`;
 // имя переменной: myBool, значение: true
-
+var myBool = true;
 // имя переменной: myArr, значения: 1, 2, 3, 4, 5
-
+var myArr = [1, 2, 3, 4, 5];
 // имя переменной myObj, значения: first: 'First Name', last: 'Last Name'
-
+var myObj = {
+  first: 'First Name',
+  last: 'Last Name'
+}
 /*
  * #2
  *
@@ -23,7 +26,7 @@ console.log('Sample JavaScript #1 HW #13');
  * чтобы получить результат с 2 знаками после запятой.
  * Результат сохраните в переменную decimal2.
  */
-
+var decimal2 = myNum.toFixed(2);
 // decimal2
 
 /*
@@ -33,7 +36,11 @@ console.log('Sample JavaScript #1 HW #13');
  * и постфиксный инкремент и декремент.
  * Поэкспериментируйте с результатами, выводя их в консоль.
  */
-
+var i = 0;
+console.log(i++)
+console.log(++i)
+console.log(i--)
+console.log(--i)
 // i
 
 /*
@@ -44,18 +51,17 @@ console.log('Sample JavaScript #1 HW #13');
  * Результаты присваиваются в myTest, затем выводятся в консоль.
  * В вычислениях можно использовать объявленную ранее переменную myNum и/или числа.
  */
-
-// myTest
-
-// +=
-
-// –=
-
-// *=
-
-// /=
-
-// %=
+var myTest = 20;
+myTest += myNum;
+console.log(`+=`,myTest)
+myTest -= 10;
+console.log(`-=`,myTest)
+myTest *= 2;
+console.log(`=*`,myTest)
+myTest /= 10;
+console.log(`=/`,myTest)
+myTest %= 2;
+console.log(`=%`,myTest)
 
 /*
  * #5
@@ -64,23 +70,26 @@ console.log('Sample JavaScript #1 HW #13');
  */
 
 // константа Pi → myPi
-
+var myPi = Math.PI;
+console.log(myPi);
 // округленное значение числа 89.279 → myRound
-
+var myRound = Math.round(89.279);
+console.log(myRound);
 // случайное число между 0..10 → myRandom
-
+var myRandom = Math.random()*10;
+console.log(myRandom);
 // 3 в 5 степени → myPow
-
+var myPow = Math.pow(3,5);
+console.log(myPow);
 /*
  * #6
  *
  * Создайте объект с именем strObj.
  * Присвойте ключу str строку текста "Мама мыла раму, рама мыла маму", ключу length установите длину этой строки.
  */
-
-// Мама мыла раму, рама мыла маму
-
-// strObj
+var strObj = {str:"Мама мыла раму, рама мыла маму"};
+strObj.length = strObj.str.length;
+console.log(`strObj =`,`strObg`);
 
 /*
  * #7
@@ -88,7 +97,8 @@ console.log('Sample JavaScript #1 HW #13');
  * Проверьте наличие текста 'рама' в поле str объекта strObj (см.п.6),
  * результат сохраните в переменную isRamaPos и выведите ее в консоль.
  */
-
+var isRamaPos = strObj.str.indexOf(`рама`);
+console.log(`isRamaPos`);
 // isRamaPos
 
 /*
@@ -99,7 +109,10 @@ console.log('Sample JavaScript #1 HW #13');
  * Исходная строка: 'Мама мыла раму, рама мыла маму'
  *       Результат: 'Мама моет раму, Рама держит маму'
  */
-
+var strReplace = strObj.str.replace(`мыла`, `моет`);
+strReplace = strReplace.replace(`рама`, `Рама`);
+strReplace = strReplace.replace(`мыла`, `держит`);
+console.log(`strReplace`,strReplace)
 // strReplace
 
 /*
@@ -107,3 +120,6 @@ console.log('Sample JavaScript #1 HW #13');
  *
  * Преобразуйте любую строку в верхний, затем в нижний регистры, результат отобразите в консоли.
  */
+var string = 'Один два три';
+console.log(string.toUpperCase());
+console.log(string.toLowerCase());
